@@ -1,5 +1,12 @@
+using MarketProducts.Data.DbContexts;
+using Newtonsoft.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+
+builder.Services.AddDbConntext<MarketDbContext>
 // Add services to the container.
 
 builder.Services.AddControllers();
