@@ -1,0 +1,12 @@
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Debug\net6.0\MarketProducts.Service.deps.json
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Debug\net6.0\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Debug\net6.0\MarketProducts.Service.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.csproj.AssemblyReference.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.AssemblyInfoInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.AssemblyInfo.cs
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.csproj.CoreCompileInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\refint\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\MarketProducts.Service.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Debug\net6.0\ref\MarketProducts.Service.dll
