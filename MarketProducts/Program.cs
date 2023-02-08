@@ -1,4 +1,5 @@
 using MarketProducts.Data.DbContexts;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
-builder.Services.AddDbConntext<MarketDbContext>
+builder.Services.AddDbContext<MarketDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("MarketDb")));
 // Add services to the container.
 
 builder.Services.AddControllers();

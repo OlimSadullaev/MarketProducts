@@ -12,7 +12,8 @@ namespace MarketProducts.Data.DbContexts
     {
         public MarketDbContext(DbContextOptions<MarketDbContext> options) : base(options) { }
 
-
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
     }
 
 }
