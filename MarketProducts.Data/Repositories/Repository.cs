@@ -1,4 +1,5 @@
-﻿using MarketProducts.Data.IRepositories;
+﻿using MarketProducts.Data.DbContexts;
+using MarketProducts.Data.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace MarketProducts.Data.Repositories
 {
     public abstract class Repository<TSource> : IRepository<TSource> where TSource : class
     {
+        private MarketDbContext dbContext;
+
+        protected Repository(MarketDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         public Task<TSource> AddAsync(TSource entity)
         {
             throw new NotImplementedException();

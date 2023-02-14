@@ -6,15 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarketProducts.Data.DbContexts
-{
-    public class MarketDbContext : DbContext
-    {
-        public MarketDbContext(DbContextOptions<MarketDbContext> options) : base(options) { }
+namespace MarketProducts.Data.DbContexts;
 
-        public virtual DbSet<Product> Products { get; set; }
+public class MarketDbContext : DbContext
+{
+    public MarketDbContext(DbContextOptions<MarketDbContext> options) 
+        : base(options) 
+    {
         
-        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
     }
 
+    public virtual DbSet<Product> Products { get; set; }
+    public virtual DbSet<ProductCategory> ProductCategories { get; set; }
 }
+
+
