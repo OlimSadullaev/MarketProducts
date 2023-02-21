@@ -1,5 +1,6 @@
 ﻿using MarketProducts.Data.DbContexts;
 using MarketProducts.Data.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,41 +12,60 @@ namespace MarketProducts.Data.Repositories
 {
     public abstract class Repository<TSource> : IRepository<TSource> where TSource : class
     {
+        protected readonly MarketDbContext _dbcontext;
+        protected readonly DbSet<TSource> _dbSet;
         private MarketDbContext dbContext;
+
+        public Repository(MarketDbContext dbcontext, DbSet<TSource> dbSet)
+        {
+            _dbcontext = dbcontext;
+            _dbSet = dbSet;
+        }
 
         protected Repository(MarketDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
 
-        public Task<TSource> AddAsync(TSource entity)
+        public async Task<TSource> AddAsync(TSource entity)
         {
-            throw new NotImplementedException();
+            var entry = await _dbSet.AddAsync(entity);
+
+            return entry.Entity;
         }
 
-        public Task DeleAsync(Expression<Func<TSource, bool>> expression)
+        public async Task DeleteAsync(Expression<Func<TSource, bool>> expression)
         {
-            throw new NotImplementedException();
+            var entity = await GetAsync(expression);
+            _dbSet.Remove(entity);
         }
 
         public IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null, string include = null, bool isTracing = true)
         {
-            throw new NotImplementedException();
+            IQueryable<TSource> query = expression is null ? _dbSet : _dbSet.Where(expression);
+
+            if(!string.IsNullOrEmpty(include))
+                query = query.Include(include);
+
+            if(!isTracing)
+                query = query.Include(include);
+
+            return query;
         }
 
-        public Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression = null, string include = null)
+        public async Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression = null, string include = null)
         {
-            throw new NotImplementedException();
+            return await GetAll(expression, include).FirstOrDefaultAsync();
         }
 
-        public Task SavechangesAsync()
+        public async Task SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            await _dbcontext.SaveChangesAsync();
         }
 
-        public Task<TSource> UpdateAsync(TSource entity)
+        public async Task<TSource> UpdateAsync(TSource entity)
         {
-            throw new NotImplementedException();
+            return _dbSet.Update(entity).Entity;
         }
     }
 }

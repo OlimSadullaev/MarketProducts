@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MarketProducts.Data.Repositories
 {
-    public class ProductCategoryRepository : Repository<ProductCategory>, IProductCategoryRepository
+    public class ProductCategoryRepository : Repository<ProductCategory>
     {
         public ProductCategoryRepository(MarketDbContext dbContext) : base(dbContext)
         {

@@ -13,7 +13,7 @@ namespace MarketProducts.Data.IRepositories
         Task<TSource> AddAsync(TSource entity);
         Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression = null, string include = null);
         Task<TSource> UpdateAsync(TSource entity);
-        Task DeleAsync(Expression<Func<TSource, bool>> expression);
-        Task SavechangesAsync();
+        Task DeleteAsync(Expression<Func<TSource, bool>> expression);
+        Task SaveChangesAsync();
     }
 }

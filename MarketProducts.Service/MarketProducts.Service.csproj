@@ -3,28 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\ProductService.Category.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="NPOI" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MarketProducts.Data\MarketProducts.Data.csproj" />
     <ProjectReference Include="..\MarketProducts.Domain\MarketProducts.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Services\ProductService.Category.cs" />
   </ItemGroup>
 
 </Project>

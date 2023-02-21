@@ -10,9 +10,9 @@ namespace MarketProducts.Service.Exceptions
     {
         public int Code { get; set; }
 
-        public MarketException(int code, string message) : base(message)
-        {
+        public MarketException(int code, string message) : base(message) 
+        { 
             this.Code = code;
-        }   
+        }
     }
 }
