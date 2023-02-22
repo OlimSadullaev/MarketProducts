@@ -11,6 +11,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 
 builder.Services.AddDbContext<MarketDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MarketDb")));
+
 builder.Services.AddAutoMapper(typeof(MarketDbContext));
 
 // builder.Services.AddControllers();
