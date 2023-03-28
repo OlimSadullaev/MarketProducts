@@ -14,17 +14,11 @@ namespace MarketProducts.Data.Repositories
     {
         protected readonly MarketDbContext _dbcontext;
         protected readonly DbSet<TSource> _dbSet;
-        private MarketDbContext dbContext;
 
-        public Repository(MarketDbContext dbcontext, DbSet<TSource> dbSet)
+        public Repository(MarketDbContext dbcontext)
         {
             _dbcontext = dbcontext;
-            _dbSet = dbSet;
-        }
-
-        protected Repository(MarketDbContext dbContext)
-        {
-            this.dbContext = dbContext;
+            _dbSet = dbcontext.Set<TSource>();
         }
 
         public async Task<TSource> AddAsync(TSource entity)

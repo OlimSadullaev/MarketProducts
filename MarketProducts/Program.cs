@@ -1,4 +1,8 @@
 using MarketProducts.Data.DbContexts;
+using MarketProducts.Data.IRepositories;
+using MarketProducts.Data.Repositories;
+using MarketProducts.Service.Interfaces;
+using MarketProducts.Service.Services;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -13,6 +17,10 @@ builder.Services.AddDbContext<MarketDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MarketDb")));
 
 builder.Services.AddAutoMapper(typeof(MarketDbContext));
+
+builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
