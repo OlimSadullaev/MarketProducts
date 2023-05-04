@@ -2,6 +2,7 @@ using MarketProducts.Data.DbContexts;
 using MarketProducts.Data.IRepositories;
 using MarketProducts.Data.Repositories;
 using MarketProducts.Service.Interfaces;
+using MarketProducts.Service.Mappers;
 using MarketProducts.Service.Services;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -16,7 +17,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 builder.Services.AddDbContext<MarketDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MarketDb")));
 
-builder.Services.AddAutoMapper(typeof(MarketDbContext));
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
