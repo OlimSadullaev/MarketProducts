@@ -1,4 +1,5 @@
-﻿using MarketProducts.Domain.Entities.Products;
+﻿using MarketProducts.Domain.Entities.Attachments;
+using MarketProducts.Domain.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,5 +18,6 @@ namespace MarketProducts.Data.DbContexts
 
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; } 
+        public virtual DbSet<Attachment> Attachments { get; set; }
     }
 }
