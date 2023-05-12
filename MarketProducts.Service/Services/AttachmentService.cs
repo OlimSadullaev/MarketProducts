@@ -1,7 +1,10 @@
-﻿using MarketProducts.Data.Repositories;
+﻿using AutoMapper;
+using MarketProducts.Data.Repositories;
 using MarketProducts.Domain.Entities.Attachments;
 using MarketProducts.Service.DTOs;
 using MarketProducts.Service.Exceptions;
+using MarketProducts.Service.Extensions;
+using MarketProducts.Service.Helpers;
 using MarketProducts.Service.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -15,10 +18,12 @@ namespace MarketProducts.Service.Services
     public class AttachmentService : IAttachmentService
     {
         private readonly AttachmentRepository attachmentRepository;
+        private readonly IMapper mapper;
 
-        public AttachmentService(AttachmentRepository attachmentRepository)
+        public AttachmentService(AttachmentRepository attachmentRepository, IMapper mapper)
         {
             this.attachmentRepository = attachmentRepository;
+            this.mapper = mapper;
         }
 
         public async Task<bool> DeleteAsync(int id)
@@ -27,31 +32,40 @@ namespace MarketProducts.Service.Services
             throw new NotImplementedException();
         }
 
-        public async Task<Attachment> UpdateAsync(AttachmentForCreationDTO dto)
+        public async Task<Attachment> UpdateAsync(int id, Stream file)
         {
-            var existAttachment = await attachmentRepository.GetAsync();
-
-            if (existAttachment != null)
-                throw new MarketException(404, "Attachment not found");
-
-            string fileName = existAttachment.Path;
-            string filePath = Path.Combine(dto.Path, fileName);
+            var existAttachment = await attachmentRepository.GetAsync(a => a.Id == id);
 
             // copy image to the destination as stream
-            FileStream fileStream = File.OpenWrite(filePath);
-            //await dto.CopyToAsync(fileStream);
+            FileStream fileStream = File.OpenWrite(existAttachment.Path);
+            await fileStream.CopyToAsync(file);
 
             await fileStream.FlushAsync();
             fileStream.Close();
 
-            await attachmentRepository.SaveChangesAsync();
-
             return existAttachment;
         }
 
-        public Task<Attachment> UploadAsync(AttachmentForCreationDTO dto)
+        public async Task<Attachment> UploadAsync(AttachmentForCreationDTO dto)
         {
-            throw new NotImplementedException();
+            string fileName = Guid.NewGuid().ToString("N") + "png";
+            string filePath = Path.Combine(EnvironmentHelper.AttachmentPath, fileName);
+
+            if (!Directory.Exists(EnvironmentHelper.AttachmentPath))
+                Directory.CreateDirectory(EnvironmentHelper.AttachmentPath);
+
+            // copy image to the destination as stream
+            FileStream fileStream = File.OpenWrite(filePath);
+            await dto.Stream.CopyToAsync(fileStream);
+
+            // clear
+            await fileStream.FlushAsync();
+            fileStream.Close();
+
+            var attachment = await attachmentRepository.AddAsync(mapper.Map<Attachment>(dto));
+            attachment.Path = filePath;
+            await attachmentRepository.SaveChangesAsync();
+            return attachment;
         }
     }
 }

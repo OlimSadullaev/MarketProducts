@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "RO+C/u/8bQH6M9CeAhfWfKh1lFj/swPUriDc8T2rgFc=",
+  "Hash": "HT1JQIP9GpXwkGq1jWE8M1NcJRZhyM1McHXGYKwMZrc=",
   "Source": "MarketProducts",
   "BasePath": "_content/MarketProducts",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MarketProducts\\wwwroot",
+      "Source": "MarketProducts",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
