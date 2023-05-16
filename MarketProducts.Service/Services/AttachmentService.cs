@@ -28,7 +28,7 @@ namespace MarketProducts.Service.Services
 
         public async Task<bool> DeleteAsync(int id)
         {
-            //var photo = await _attachmentService.FindAsync(id);
+            //var photo = await attachmentRepository.FindAsync(id);
             throw new NotImplementedException();
         }
 
@@ -48,7 +48,7 @@ namespace MarketProducts.Service.Services
 
         public async Task<Attachment> UploadAsync(AttachmentForCreationDTO dto)
         {
-            string fileName = Guid.NewGuid().ToString("N") + "png";
+            string fileName = Guid.NewGuid().ToString("N") + "jpg";
             string filePath = Path.Combine(EnvironmentHelper.AttachmentPath, fileName);
 
             if (!Directory.Exists(EnvironmentHelper.AttachmentPath))

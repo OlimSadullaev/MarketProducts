@@ -9,6 +9,5 @@ namespace MarketProducts.Data.IRepositories
 {
     public interface IAttachmentRepository : IRepository<Attachment>
     {
-           
     }
 }

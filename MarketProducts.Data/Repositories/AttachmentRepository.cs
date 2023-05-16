@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace MarketProducts.Data.Repositories
 {
     public class AttachmentRepository : Repository<Attachment>, IAttachmentRepository
-    {
+    {  
         public AttachmentRepository(MarketDbContext dbcontext) : base(dbcontext)
         {
         }
