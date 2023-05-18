@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MarketProducts.Data.IRepositories;
 using MarketProducts.Data.Repositories;
 using MarketProducts.Domain.Entities.Attachments;
 using MarketProducts.Service.DTOs;
@@ -17,22 +18,22 @@ namespace MarketProducts.Service.Services
 {
     public class AttachmentService : IAttachmentService
     {
-        private readonly AttachmentRepository attachmentRepository;
+        private readonly IAttachmentRepository attachmentRepository;
         private readonly IMapper mapper;
 
-        public AttachmentService(AttachmentRepository attachmentRepository, IMapper mapper)
+        public AttachmentService(IAttachmentRepository attachmentRepository, IMapper mapper)
         {
             this.attachmentRepository = attachmentRepository;
             this.mapper = mapper;
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(long id)
         {
             //var photo = await attachmentRepository.FindAsync(id);
             throw new NotImplementedException();
         }
 
-        public async Task<Attachment> UpdateAsync(int id, Stream file)
+        public async Task<Attachment> UpdateAsync(long id, Stream file)
         {
             var existAttachment = await attachmentRepository.GetAsync(a => a.Id == id);
 
@@ -48,7 +49,7 @@ namespace MarketProducts.Service.Services
 
         public async Task<Attachment> UploadAsync(AttachmentForCreationDTO dto)
         {
-            string fileName = Guid.NewGuid().ToString("N") + "jpg";
+            string fileName = Guid.NewGuid().ToString("N") + ".jpg";
             string filePath = Path.Combine(EnvironmentHelper.AttachmentPath, fileName);
 
             if (!Directory.Exists(EnvironmentHelper.AttachmentPath))

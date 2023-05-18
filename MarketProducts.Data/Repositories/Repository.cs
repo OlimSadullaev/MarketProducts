@@ -57,7 +57,7 @@ namespace MarketProducts.Data.Repositories
             await _dbcontext.SaveChangesAsync();
         }
 
-        public async Task<TSource> UpdateAsync(TSource entity)
+        public TSource Update(TSource entity)
         {
             return _dbSet.Update(entity).Entity;
         }

@@ -12,7 +12,7 @@ namespace MarketProducts.Service.Interfaces
     public interface IAttachmentService
     {
         Task<Attachment> UploadAsync(AttachmentForCreationDTO dto);
-        Task<bool> DeleteAsync(int id);
-        Task<Attachment> UpdateAsync(int id, Stream file);
+        Task<bool> DeleteAsync(long id);
+        Task<Attachment> UpdateAsync(long id, Stream file);
     }
 }

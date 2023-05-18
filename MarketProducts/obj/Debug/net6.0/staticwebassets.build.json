@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HT1JQIP9GpXwkGq1jWE8M1NcJRZhyM1McHXGYKwMZrc=",
+  "Hash": "ZybbvVrjFC1BR/TfHcBPP9+jSciT2s3V4qw6wVltD7w=",
   "Source": "MarketProducts",
   "BasePath": "_content/MarketProducts",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg",
+      "SourceId": "MarketProducts",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "RelativePath": "Images/758b309f0d2e47238f45da2a3e64466c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg"
+    }
+  ]
 }

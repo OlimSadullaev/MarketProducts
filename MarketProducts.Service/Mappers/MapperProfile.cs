@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MarketProducts.Domain.Entities.Attachments;
 using MarketProducts.Domain.Entities.Products;
 using MarketProducts.Service.DTOs;
 using System;
@@ -14,6 +15,7 @@ namespace MarketProducts.Service.Mappers
         public MapperProfile()
         {
             CreateMap<Product, ProductForCreationDTO>().ReverseMap();
+            CreateMap<Attachment, AttachmentForCreationDTO>().ReverseMap();
         }
     }
 }

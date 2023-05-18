@@ -15,12 +15,6 @@ namespace MarketProducts.Service.Services
 {
     public partial class ProductService
     {
-        private readonly IProductCategoryRepository _productCategoryRepository;
-        public ProductService(IProductCategoryRepository productCategoryRepository)
-        {
-            _productCategoryRepository = productCategoryRepository;
-        }
-
         public async Task<IEnumerable<ProductCategory>> GetAllCategoriesAsync(PaginationParams @params, Expression<Func<ProductCategory, bool>> expression = null)
         {
             var pagedList = _productCategoryRepository.GetAll(expression, isTracing: false).ToPagedList(@params);
@@ -30,7 +24,7 @@ namespace MarketProducts.Service.Services
 
         public async Task<IEnumerable<ProductCategory>> GetAllCategoryWithProductsAsync(PaginationParams @params, Expression<Func<ProductCategory, bool>> expression = null)
         {
-            var pagedList = _productCategoryRepository.GetAll(expression, "Product", false).ToPagedList(@params);
+            var pagedList = _productCategoryRepository.GetAll(expression, "Products", false).ToPagedList(@params);
 
             return await pagedList.ToListAsync();
         }
@@ -65,6 +59,7 @@ namespace MarketProducts.Service.Services
             existingCategory.Name = dto;
             existingCategory.UpdatedAt = DateTime.UtcNow;
 
+            _productCategoryRepository.Update(existingCategory);
             await _productCategoryRepository.SaveChangesAsync();
 
             return existingCategory;

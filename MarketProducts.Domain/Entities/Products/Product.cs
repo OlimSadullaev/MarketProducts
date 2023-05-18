@@ -1,6 +1,8 @@
 ﻿using MarketProducts.Domain.Commons;
+using MarketProducts.Domain.Entities.Attachments;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,5 +16,7 @@ namespace MarketProducts.Domain.Entities.Products
 
         public long CategoryId { get; set; }
         public ProductCategory Category { get; set; }
+        public long? AttachmentId { get; set; }
+        public Attachment Attachment { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MarketProducts.Domain.Entities.Attachments
 {
-    public class Attachment : Auditable<int>
+    public class Attachment : Auditable<long>
     {
         public string Path { get; set; }
     }

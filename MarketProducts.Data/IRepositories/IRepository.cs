@@ -12,7 +12,7 @@ namespace MarketProducts.Data.IRepositories
         IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null, string include = null, bool isTracing = true);
         Task<TSource> AddAsync(TSource entity);
         Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression = null, string include = null);
-        Task<TSource> UpdateAsync(TSource entity);
+        TSource Update(TSource entity);
         Task DeleteAsync(Expression<Func<TSource, bool>> expression);
         Task SaveChangesAsync();
     }

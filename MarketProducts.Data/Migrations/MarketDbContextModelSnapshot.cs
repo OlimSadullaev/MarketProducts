@@ -22,6 +22,28 @@ namespace MarketProducts.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("MarketProducts.Domain.Entities.Attachments.Attachment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Attachments");
+                });
+
             modelBuilder.Entity("MarketProducts.Domain.Entities.Products.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -29,6 +51,9 @@ namespace MarketProducts.Data.Migrations
                         .HasColumnType("bigint");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<long?>("AttachmentId")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("CategoryId")
                         .HasColumnType("bigint");
@@ -46,6 +71,8 @@ namespace MarketProducts.Data.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AttachmentId");
 
                     b.HasIndex("CategoryId");
 
@@ -76,11 +103,17 @@ namespace MarketProducts.Data.Migrations
 
             modelBuilder.Entity("MarketProducts.Domain.Entities.Products.Product", b =>
                 {
+                    b.HasOne("MarketProducts.Domain.Entities.Attachments.Attachment", "Attachment")
+                        .WithMany()
+                        .HasForeignKey("AttachmentId");
+
                     b.HasOne("MarketProducts.Domain.Entities.Products.ProductCategory", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Attachment");
 
                     b.Navigation("Category");
                 });

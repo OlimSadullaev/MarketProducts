@@ -20,6 +20,7 @@ namespace MarketProducts.Service.Services
     public partial class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IProductCategoryRepository _productCategoryRepository;
         private readonly IMapper _mapper;
         public ProductService(IProductRepository repository, IMapper mapper, IProductCategoryRepository productCategoryRepository)
         {
@@ -77,7 +78,7 @@ namespace MarketProducts.Service.Services
                 throw new MarketException(404, "Product not found");
 
             var mappedProduct = _mapper.Map(dto, product);
-            var updatedProduct = await _productRepository.UpdateAsync(mappedProduct);
+            var updatedProduct = _productRepository.Update(mappedProduct);
             await _productRepository.SaveChangesAsync();
 
             return updatedProduct;
