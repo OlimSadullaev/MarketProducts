@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "XNVPgPcomqm8RNCzX9LWoMgMcCrpbC9DbfGIdrsqcnA=",
+  "Source": "MarketProducts",
+  "BasePath": "_content/MarketProducts",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MarketProducts\\wwwroot",
+      "Source": "MarketProducts",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg",
+      "SourceId": "MarketProducts",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "RelativePath": "Images/758b309f0d2e47238f45da2a3e64466c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg"
+    }
+  ]
+}
