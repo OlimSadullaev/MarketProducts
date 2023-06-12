@@ -1,0 +1,12 @@
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\bin\Release\net6.0\MarketProducts.Domain.deps.json
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\bin\Release\net6.0\MarketProducts.Domain.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\bin\Release\net6.0\MarketProducts.Domain.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.csproj.AssemblyReference.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.AssemblyInfoInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.AssemblyInfo.cs
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\refint\MarketProducts.Domain.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\MarketProducts.Domain.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Domain\obj\Release\net6.0\ref\MarketProducts.Domain.dll

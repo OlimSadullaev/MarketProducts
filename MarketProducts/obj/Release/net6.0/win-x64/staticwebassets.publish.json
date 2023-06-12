@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XNVPgPcomqm8RNCzX9LWoMgMcCrpbC9DbfGIdrsqcnA=",
+  "Hash": "zhoDfuCFBA6D98fuAaR+B9JCwa0SNC0qEEhNz0LXulk=",
   "Source": "MarketProducts",
   "BasePath": "_content/MarketProducts",
   "Mode": "Default",
@@ -17,6 +17,23 @@
   ],
   "Assets": [
     {
+      "Identity": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\Images\\2d5e446538ea4340b5df69bc7c934e2c.jpg",
+      "SourceId": "MarketProducts",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "RelativePath": "Images/2d5e446538ea4340b5df69bc7c934e2c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\2d5e446538ea4340b5df69bc7c934e2c.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg",
       "SourceId": "MarketProducts",
       "SourceType": "Discovered",
@@ -32,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\758b309f0d2e47238f45da2a3e64466c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\Images\\e105f2798d9c4d08a6dc4077697f6697.jpg",
+      "SourceId": "MarketProducts",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\PPTX\\Marketplace\\MarketProducts\\wwwroot\\",
+      "BasePath": "_content/MarketProducts",
+      "RelativePath": "Images/e105f2798d9c4d08a6dc4077697f6697.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\e105f2798d9c4d08a6dc4077697f6697.jpg"
     }
   ]
 }

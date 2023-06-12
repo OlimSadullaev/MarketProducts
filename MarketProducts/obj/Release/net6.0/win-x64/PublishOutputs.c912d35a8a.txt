@@ -9,6 +9,10 @@ C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\Enums.NET.dll
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\MathNet.Numerics.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\System.Web.Cors.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\System.Net.Http.Formatting.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\System.Web.Http.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\System.Web.Http.Cors.dll
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\publish\Microsoft.EntityFrameworkCore.dll

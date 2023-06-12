@@ -1,0 +1,17 @@
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Service.deps.json
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Service.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Data.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Domain.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Data.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\bin\Release\net6.0\win-x64\MarketProducts.Domain.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.csproj.AssemblyReference.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.AssemblyInfoInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.AssemblyInfo.cs
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.csproj.CoreCompileInputs.cache
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.csproj.CopyComplete
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\refint\MarketProducts.Service.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\MarketProducts.Service.pdb
+C:\Users\user\PPTX\Marketplace\MarketProducts.Service\obj\Release\net6.0\win-x64\ref\MarketProducts.Service.dll

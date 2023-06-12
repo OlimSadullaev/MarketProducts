@@ -29,8 +29,16 @@ namespace MarketProducts.Service.Services
 
         public async Task<bool> DeleteAsync(long id)
         {
-            //var photo = await attachmentRepository.FindAsync(id);
-            throw new NotImplementedException();
+            var attachment = await attachmentRepository.GetAsync(a => a.Id == id);
+            
+            if (attachment == null)
+                throw new MarketException(404, "attachment not found");
+            
+            await attachmentRepository.DeleteAsync(a => a.Id == id);
+            File.Delete(attachment.Path);
+            
+            await attachmentRepository.SaveChangesAsync();
+            return true;
         }
 
         public async Task<Attachment> UpdateAsync(long id, Stream file)

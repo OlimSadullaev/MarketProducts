@@ -38,8 +38,9 @@ var app = builder.Build();
 
 app.UseSwagger();
 
- app.UseSwaggerUI();
+app.UseSwaggerUI();
 
+app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseStaticFiles();
 
@@ -47,7 +48,7 @@ EnvironmentHelper.WebRootPath = app.Services.GetRequiredService<IWebHostEnvironm
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthorization(); 
 
 app.MapControllers();
 

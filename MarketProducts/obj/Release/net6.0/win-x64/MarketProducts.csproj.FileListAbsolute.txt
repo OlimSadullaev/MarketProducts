@@ -85,3 +85,7 @@ C:\Users\user\PPTX\Marketplace\MarketProducts\obj\Release\net6.0\win-x64\refint\
 C:\Users\user\PPTX\Marketplace\MarketProducts\obj\Release\net6.0\win-x64\MarketProducts.pdb
 C:\Users\user\PPTX\Marketplace\MarketProducts\obj\Release\net6.0\win-x64\MarketProducts.genruntimeconfig.cache
 C:\Users\user\PPTX\Marketplace\MarketProducts\obj\Release\net6.0\win-x64\ref\MarketProducts.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\System.Web.Cors.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\System.Net.Http.Formatting.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\System.Web.Http.dll
+C:\Users\user\PPTX\Marketplace\MarketProducts\bin\Release\net6.0\win-x64\System.Web.Http.Cors.dll
