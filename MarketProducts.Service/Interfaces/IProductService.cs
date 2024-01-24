@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MarketProducts.Service.Interfaces
 {
-    public partial interface IProductService
+    public interface IProductService
     {
         Task<IEnumerable<Product>> GetAllAsync(PaginationParams @params, Expression<Func<Product, bool>> expression = null);
         Task<IEnumerable<Product>> GetAllWithCategoriesAsync(PaginationParams @params, Expression<Func<Product, bool>> expression = null);

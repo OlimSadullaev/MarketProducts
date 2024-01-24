@@ -12,18 +12,18 @@ namespace MarketProducts.Data.Repositories
 {
     public abstract class Repository<TSource> : IRepository<TSource> where TSource : class
     {
-        protected readonly MarketDbContext _dbcontext;
-        protected readonly DbSet<TSource> _dbSet;
+        protected readonly MarketDbContext dbcontext;
+        protected readonly DbSet<TSource> dbSet;
 
         public Repository(MarketDbContext dbcontext)
         {
-            _dbcontext = dbcontext;
-            _dbSet = dbcontext.Set<TSource>();
+            this.dbcontext = dbcontext;
+            this.dbSet = dbcontext.Set<TSource>();
         }
 
         public async Task<TSource> AddAsync(TSource entity)
         {
-            var entry = await _dbSet.AddAsync(entity);
+            var entry = await dbSet.AddAsync(entity);
 
             return entry.Entity;
         }
@@ -31,12 +31,12 @@ namespace MarketProducts.Data.Repositories
         public async Task DeleteAsync(Expression<Func<TSource, bool>> expression)
         {
             var entity = await GetAsync(expression);
-            _dbSet.Remove(entity);
+            dbSet.Remove(entity);
         }
 
         public IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null, string include = null, bool isTracing = true)
         {
-            IQueryable<TSource> query = expression is null ? _dbSet : _dbSet.Where(expression);
+            IQueryable<TSource> query = expression is null ? dbSet : dbSet.Where(expression);
 
             if(!string.IsNullOrEmpty(include))
                 query = query.Include(include);
@@ -54,12 +54,12 @@ namespace MarketProducts.Data.Repositories
 
         public async Task SaveChangesAsync()
         {
-            await _dbcontext.SaveChangesAsync();
+            await dbcontext.SaveChangesAsync();
         }
 
         public TSource Update(TSource entity)
         {
-            return _dbSet.Update(entity).Entity;
+            return dbSet.Update(entity).Entity;
         }
     }
 }

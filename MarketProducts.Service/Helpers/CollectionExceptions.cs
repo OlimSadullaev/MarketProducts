@@ -16,5 +16,14 @@ namespace MarketProducts.Service.Helpers
                 ? source.Skip((@params.PageIndex - 1) * @params.PageSize).Take(@params.PageIndex)
                 : source;
         }
+
+        /*public static IQueryable<T> ToPagedList<T>(this IQueryable<T> source, PaginationParams @params)
+        {
+            var value = ((@params.PageIndex - 1) * @params.PageSize);
+
+            return @params.PageIndex > 0 && @params.PageSize >= 0
+                ? source.Take(value..(value + @params.PageSize))
+                : source;
+        }*/
     } 
 }
